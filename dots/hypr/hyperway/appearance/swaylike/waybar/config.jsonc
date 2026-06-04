@@ -64,10 +64,13 @@
     "keyboard-state": {
         "numlock": true,
         "capslock": true,
-        "format": "{name}{icon}",
+        "format": {
+          "capslock": "[A]",
+          "numlock": "Num",
+        },
         "format-icons": {
-            "locked": "[<span color='#00ff00'>X</span>]",
-            "unlocked": "[<span color='#888888'>-</span>]"
+            "locked": "<span color='#00ff00'>X</span>",
+            "unlocked": "<span color='#888888'>-</span>"
         }
     },
     "sway/scratchpad": {
@@ -153,8 +156,8 @@
         },
         "format": "{capacity}% {icon} ",
         "format-full": "{capacity}% {icon} ",
-        "format-charging": "{capacity}%  ",
-        "format-plugged": "{capacity}%  ",
+        "format-charging": "{capacity}%<span color='#00ff00'>+</span>{icon} ",
+        "format-plugged": "{capacity}% PLUG ",
         "format-alt": "{time} {icon}",
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
