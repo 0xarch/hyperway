@@ -1,9 +1,10 @@
 # Hyperway
 
-Hyperway is a set of dots that is used by 0xarch.
+Hyperway is a set of dots that is used by 0xarch for Hyprland WM on Archlinux.
 
 If you want this too:
     * Clone this repository.
+    * Install `packages/hyperway-meta`. (This provides you the default apps and Hyprland itself)
     * Link `dots/hypr/hyperway` to `~/.config/hypr/hyperway`
     * Require `hyperway.main` in your `hyprland.lua` config file.
 
