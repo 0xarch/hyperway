@@ -1,3 +1,5 @@
+require("hyperway.workspace.defaultrule")
+
 WORKSPACE_COUNT = os.getenv("HYPERWAY_WORKSPACE_COUNT", 10)
 
 for i = 1, WORKSPACE_COUNT do
