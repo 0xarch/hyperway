@@ -66,7 +66,7 @@
         "capslock": true,
         "format": {
           "capslock": "[A]",
-          "numlock": "Num",
+          "numlock": "[N]",
         },
         "format-icons": {
             "locked": "<span color='#00ff00'>X</span>",
@@ -129,11 +129,11 @@
         "format-alt": "{:%Y-%m-%d}"
     },
     "cpu": {
-        "format": "CPU {usage}% {load}",
+        "format": "<span color='#ffff00'>CPU</span>{usage}%({load})",
         "tooltip": false
     },
     "memory": {
-        "format": "MEM {percentage}% {used}G/{total}G SWAP {swapPercentage}% {swapUsed}G/{swapTotal}G"
+        "format": "<span color='#ffff00'>MEM</span>{percentage}%({used}G/{total}G) <span color='#ffff00'>SWAP</span>{swapPercentage}%({swapUsed}G/{swapTotal}G)"
     },
     "temperature": {
         // "thermal-zone": 2,
