@@ -37,6 +37,11 @@
         %%PERSISTENT%%
       }
     },
+    "hyprland/window": {
+      "disable-scroll": false,
+      "on-scroll-up": "hyprctl dispatch 'hl.dsp.focus({workspace=\"-1\"})'",
+      "on-scroll-down": "hyprctl dispatch 'hl.dsp.focus({workspace=\"+1\"})'",   
+    },
     // Modules configuration
     // "sway/workspaces": {
     //     "disable-scroll": true,
@@ -57,14 +62,11 @@
     "keyboard-state": {
         "numlock": true,
         "capslock": true,
-        "format": "{name} {icon}",
+        "format": "{name}{icon}",
         "format-icons": {
-            "locked": "",
-            "unlocked": ""
+            "locked": "[<span color='#00ff00'>X</span>]",
+            "unlocked": "[]"
         }
-    },
-    "sway/mode": {
-        "format": "<span style=\"italic\">{}</span>"
     },
     "sway/scratchpad": {
         "format": "{icon} {count}",
@@ -122,11 +124,11 @@
         "format-alt": "{:%Y-%m-%d}"
     },
     "cpu": {
-        "format": "{usage}%  ",
+        "format": "CPU {usage}% {load}",
         "tooltip": false
     },
     "memory": {
-        "format": "{}%  "
+        "format": "MEM {percentage}% {used}G/{total}G SWAP {swapPercentage}% {swapUsed}G/{swapTotal}G"
     },
     "temperature": {
         // "thermal-zone": 2,
@@ -172,7 +174,7 @@
     },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "{essid} {signalStrength}%  ",
+        "format-wifi": "{signalStrength}% {essid}  ",
         "format-ethernet": "{ipaddr}/{cidr}  ",
         "tooltip-format": "{ifname} via {gwaddr}  ",
         "format-linked": "{ifname} (No IP)  ",
