@@ -50,6 +50,11 @@ button:hover {
     padding: 0 2px;
     border: 1px solid transparent;
     background-color: transparent;
+    color: white;
+}
+
+window#waybar.empty #workspaces button {
+    color: black;
 }
 
 #workspaces button.focused, #workspaces button.active {
