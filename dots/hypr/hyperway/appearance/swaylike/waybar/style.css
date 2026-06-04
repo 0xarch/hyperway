@@ -156,26 +156,6 @@ window#waybar.empty #workspaces button {
 /*     color: #000000; */
 /* } */
 /**/
-/* label:focus { */
-/*     background-color: #000000; */
-/* } */
-/**/
-/* #cpu { */
-/*     background-color: #2ecc71; */
-/*     color: #000000; */
-/* } */
-/**/
-/* #memory { */
-/*     background-color: #9b59b6; */
-/* } */
-/**/
-/* #disk { */
-/*     background-color: #964B00; */
-/* } */
-/**/
-/* #backlight { */
-/*     background-color: #90b1b1; */
-/* } */
 
 #network {
     color: #00ff00;
@@ -185,15 +165,13 @@ window#waybar.empty #workspaces button {
     color: #ff0000;
 }
 
-/* #pulseaudio { */
-/*     background-color: #f1c40f; */
-/*     color: #000000; */
-/* } */
-/**/
-/* #pulseaudio.muted { */
-/*     background-color: #90b1b1; */
-/*     color: #2a5c45; */
-/* } */
+window#waybar.empty #network {
+    color: #008800;
+}
+
+window#waybar.empty #network.disconnected {
+    color: #880000;
+}
 /**/
 /* #wireplumber { */
 /*     background-color: #fff0f5; */
@@ -286,6 +264,10 @@ window#waybar.empty #workspaces button {
 
 #keyboard-state > label.locked {
     color: #00ff00;
+}
+
+window#waybar.empty #keyboard-state > label.locked {
+    color: #008800;
 }
 
 /* #scratchpad { */

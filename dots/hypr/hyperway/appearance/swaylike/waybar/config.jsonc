@@ -1,11 +1,7 @@
 // -*- mode: jsonc -*-
 {
-    // "layer": "top", // Waybar at top layer
-    // "position": "bottom", // Waybar position (top|bottom|left|right)
-    // "width": 1280, // Waybar width
     "height": 32,
     "spacing": 0, // Gaps between modules (4px)
-    // Choose the order of the modules
     "modules-left": [
         "hyprland/workspaces",
         "hyprland/submap",
@@ -15,22 +11,26 @@
     ],
     "modules-right": [
         "custom/darkmode",
-        // "mpd",
-        "idle_inhibitor",
+        "custom/space",
         "pulseaudio",
         "backlight",
+        "custom/space",
         "network",
-        // "power-profiles-daemon",
+        "custom/space",
         "cpu",
         "memory",
         "temperature",
+        "custom/space",
         "keyboard-state",
-        // "sway/language",
         "battery",
         "battery#bat2",
         "clock",
+        "custom/space",
         "tray",
     ],
+    "custom/space": {
+      "format": " <span color='#888888'>|</span> ",
+    },
     "hyprland/workspaces": {
       "disable-scroll": false,
       "on-scroll-up": "hyprctl dispatch 'hl.dsp.focus({workspace=\"-1\"})'",
@@ -114,7 +114,6 @@
         }
     },
     "tray": {
-        // "icon-size": 21,
         "spacing": 4,
         // "icons": {
         //   "blueman": "bluetooth",
@@ -129,8 +128,9 @@
         "format-alt": "{:%Y-%m-%d}"
     },
     "cpu": {
-        "format": "<span color='#ffff00'>CPU</span>{usage}%({load})",
-        "tooltip": false
+        "format": "{icon}{usage}%({load})",
+        "tooltip": false,
+        "format-icons": [ "<span color='#00ff00'>CPU</span>", "<span color='#88ff00'>CPU</span>", "<span color='#ffff00'>CPU</span>", "<span color='#ff8800'>CPU</span>", "<span color='#ff00'>CPU</span>",],
     },
     "memory": {
         "format": "<span color='#ffff00'>MEM</span>{percentage}%({used}G/{total}G) <span color='#ffff00'>SWAP</span>{swapPercentage}%({swapUsed}G/{swapTotal}G)"
@@ -191,9 +191,9 @@
         "format": "{icon} {volume}% {format_source}",
         "format-bluetooth": "{icon} {volume}% {format_source}",
         "format-bluetooth-muted": "{icon}  {format_source}",
-        "format-muted": " {format_source}",
+        "format-muted": "<span color='#ff0000'>MUTE</span> {format_source}",
         "format-source": " {volume}%",
-        "format-source-muted": "",
+        "format-source-muted": "<span color='#ff0000'> </span>",
         "format-icons": {
             "headphone": "",
             "hands-free": "",

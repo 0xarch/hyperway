@@ -1,2 +1,3 @@
 max-history=25
 on-button-left=invoke-default-action
+default-timeout=5
