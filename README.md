@@ -70,6 +70,10 @@ The `hyperway-keybind-suggest-app` contains:
     * pavucontrol-qt (`SUPER + M`)
     * plasma-workspace (optionally used in waybar darkmode module, and utils, for Qt apps)
 
+## Extra Providing
+
+There's also a hyprlock configuration file. It contains a simple, quick hyprlock interface. You can copy or link this.
+
 ## NO CONTRIBUTION
 
 This is the dot that SUIT MY WORKFLOW and I did as much modulizing as I can. You can copy any of these files to your own dotfile.
