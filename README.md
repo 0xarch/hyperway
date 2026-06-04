@@ -35,7 +35,7 @@ The rest functions requires you to manually enable it by setting the environment
     > * Disable animation for layer `gtk4-layer-shell`
 
 These environment variables requires string or number, as it tells the dot how to setup the at least workable interface:
-    * `HYPERWAY_APPEARANCE`: The interface. See [Appearance](#appearance).
+    * `HYPERWAY_APPEARANCE`, `HYPERWAY_APPEARANCE_*`: The interface. See [Appearance](#appearance).
     * `HYPERWAY_WORKSPACE_COUNT`: How many workspaces you want. Keybinds for `SUPER + i`, `SUPER + SHIFT + i`, `SUPER + ALT + i` will be registered. Also waybar will display persistent workspaces in this count. Defaults to 10.
 
 ## Appearance
@@ -47,6 +47,8 @@ For now you can choose:
 
 The default (unspecified or not included above) brings you the default configuration of a minimum DE deps: `waybar`, `swayosd`, `mako`. They are using the copied default files.
 
+`HYPERWAY_APPEARANCE_WALLPAPER_LIGHT` and `HYPERWAY_APPEARANCE_WALLPAPER_DARK` specifies the wallpaper you want. No wallpaper will be used if not specified. Switching is automatically done through darkmode utils.
+
 ## Packages
 
 You can find these packages in `packages` directory.
@@ -56,7 +58,7 @@ The `hyperway-meta` contains:
     * hyprland (start by greet daemons)
     * waybar (autostart)
     * swayosd (autostart)
-    * swaybg (requires your manual configuring)
+    * swaybg (Used in darkmode utils, for Wallpaper displaying)
 
 The `hyperway-keybind-basicapp` contains:
     * hyprpicker (`SUPER + SHIFT + C`)
@@ -68,7 +70,7 @@ The `hyperway-keybind-suggest-app` contains:
     * dolphin (`SUPER + E`)
     * chromium (`SUPER + W`)
     * pavucontrol-qt (`SUPER + M`)
-    * plasma-workspace (optionally used in waybar darkmode module, and utils, for Qt apps)
+    * plasma-workspace (optionally used in darkmode utils, for Qt apps)
 
 ## Extra Providing
 
