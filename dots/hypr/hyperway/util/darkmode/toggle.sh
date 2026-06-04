@@ -17,5 +17,4 @@ if which plasma-apply-colorscheme; then
   plasma-apply-colorscheme "$QT_MODE"
 fi
 
-pkill -RTMIN+77 waybar
-
+kill -SIGRTMIN+30 $(pgrep waybar)

@@ -16,6 +16,8 @@ ALMOST all functions requires you to manually enable it by setting the environme
     * `HYPERWAY_KEYBIND_CONTROL`: Apply a set of keybinds providing basic window management.
     * `HYPERWAY_KEYBIND_DEVICE`: Apply a set of keybinds providing basic device controlling (e.g. speaker and backlight).
     * `HYPERWAY_KEYBIND_SUGGESTAPP`: Apply a set of keybinds to launch the suggested applications. They are dependencies of `hyperway-keybind-basicapp` package.
+    * `HYPERWAY_KEYBIND_UTIL`: Apply a set of keybinds related to look and feel and other things not so important.
+    > Current it has: `SUPER + CTRL + SHIFT + D` for toggling dark themes
 
 These environment variables MUST BE FILLED, as it tells the dot how to setup the at least workable interface:
     * `HYPERWAY_APPEARANCE`: The interface. For now it has to be undefined or `swaylike`, The Swaylike appearance provides interface which looks like sway but with some improvements. If not defined, no tweaks related to appearance will be applied, and all applications use the default theme.
@@ -40,7 +42,7 @@ The `hyperway-keybind-suggest-app` contains:
     * dolphin (`SUPER + E`)
     * chromium (`SUPER + W`)
     * pavucontrol-qt (`SUPER + M`)
-    * plasma-workspace (optionally used in waybar darkmode module)
+    * plasma-workspace (optionally used in waybar darkmode module, and utils, for Qt apps)
 
 ## NO CONTRIBUTION
 

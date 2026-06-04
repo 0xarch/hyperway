@@ -230,7 +230,7 @@
     "custom/darkmode": {
         "exec": "$HOME/.config/hypr/hyperway/util/darkmode/output.sh",
         "on-click": "$HOME/.config/hypr/hyperway/util/darkmode/toggle.sh",
-        "signal": 77,
+        "signal": 30,
         "interval": "once",
     }
 }
