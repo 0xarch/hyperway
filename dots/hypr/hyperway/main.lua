@@ -1,0 +1,5 @@
+require("hyperway.input.main")
+require("hyperway.keybind.main")
+require("hyperway.appearance.main")
+require("hyperway.workspace.main")
+require("hyperway.exe.main")

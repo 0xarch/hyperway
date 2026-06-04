@@ -1,0 +1,13 @@
+groups=(hyperway-dots)
+pkgname=hyperway-keybind-basicapp
+pkgver=1.0
+pkgrel=1
+pkgdesc="Meta package for Hyperway"
+arch=(any)
+license=(None)
+depends=(
+  hyprpicker
+  kitty
+  fuzzel
+  hyprshot
+)
