@@ -128,11 +128,13 @@
         "format-alt": "{:%Y-%m-%d}"
     },
     "cpu": {
+        "interval": 1.5,
         "format": "{icon}{usage}%({load})",
         "tooltip": false,
         "format-icons": [ "<span color='#00ff00'>CPU</span>", "<span color='#88ff00'>CPU</span>", "<span color='#ffff00'>CPU</span>", "<span color='#ff8800'>CPU</span>", "<span color='#ff00'>CPU</span>"]
     },
     "memory": {
+        "interval": 1.5,
         "format": "{icon}{percentage}%({used}G/{total}G) <span color='#888800'>SWAP</span>{swapPercentage}%({swapUsed}G/{swapTotal}G)",
         "format-icons": [ "<span color='#00ff00'>MEM</span>", "<span color='#88ff00'>MEM</span>", "<span color='#ffff00'>MEM</span>", "<span color='#ff8800'>MEM</span>", "<span color='#ff00'>MEM</span>"]
     },
