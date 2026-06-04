@@ -5,25 +5,34 @@ Hyperway is a set of dots that is used by 0xarch for Hyprland WM on Archlinux.
 The main keybinding is inspired by [illogical-impulse](https://github.com/end-4/dots-hyprland).
 
 If you want this too:
-    * Clone this repository.
-    * Install `packages/hyperway-meta`. (This provides you the default apps and Hyprland itself)
-    * Link `dots/hypr/hyperway` to `~/.config/hypr/hyperway`
-    * Require `hyperway.main` in your `hyprland.lua` config file.
+  * Clone this repository.
+  * Install package `packages/hyperway-meta`. (This provides you the default apps and Hyprland itself)
+  * Link `dots/hypr/hyperway` to `~/.config/hypr/hyperway`
+  * Require `hyperway.main` in your `hyprland.lua` config file.
 
 ## Functions
 
-ALMOST all functions requires you to manually enable it by setting the environment variables to `1`:
-    * `HYPERWAY_EXE_DEFAULT`: Set up the default startup applications. Most of these applications (except `fcitx5`) is dependencies of `hyperway-meta`.
-    * `HYPERWAY_INPUT_KEYBOARD`: Apply a set of tweaks to your keyboard.
-    * `HYPERWAY_INPUT_TOUCHPAD`: Apply a set of tweaks to your touchpad.
-    * `HYPERWAY_KEYBIND_BASICAPP`: Apply a set of keybinds to launch the specific applications. They are dependencies of `hyperway-keybind-basicapp` package.
-    * `HYPERWAY_KEYBIND_CONTROL`: Apply a set of keybinds providing basic window management.
-    * `HYPERWAY_KEYBIND_DEVICE`: Apply a set of keybinds providing basic device controlling (e.g. speaker and backlight).
-    * `HYPERWAY_KEYBIND_SUGGESTAPP`: Apply a set of keybinds to launch the suggested applications. They are dependencies of `hyperway-keybind-basicapp` package.
-    * `HYPERWAY_KEYBIND_UTIL`: Apply a set of keybinds related to look and feel and other things not so important.
-    > Current util binding has:
-    >   * `SUPER + CTRL + SHIFT + D` for toggling dark themes
-    >   * `SUPER + L` for `hyprlock` (If you want, you have to manually install and configure it)
+Basically, after you did a simple setup with nothing modified, you can get only 10*3 registered workspace keybindings, they are:
+  * `SUPER + $i`: go to workspace `i`
+  * `SUPER + SHIFT + $i`: bring the current window to workspace `i` with focus
+  * `SUPER + ALT + $i`: bring the current window to workspace `i`
+
+The rest functions requires you to manually enable it by setting the environment variables to `1` and some requires other executables:
+  * `HYPERWAY_EXE_DEFAULT`: Set up the default startup applications. Most of these applications (except `fcitx5`) is dependencies of `hyperway-meta`.
+  * `HYPERWAY_INPUT_KEYBOARD`: Apply a set of tweaks to your keyboard.
+  * `HYPERWAY_INPUT_TOUCHPAD`: Apply a set of tweaks to your touchpad.
+  * `HYPERWAY_KEYBIND_BASICAPP`: Apply a set of keybinds to launch the specific applications. They are dependencies of `hyperway-keybind-basicapp` package.
+  * `HYPERWAY_KEYBIND_CONTROL`: Apply a set of keybinds providing basic window management.
+  * `HYPERWAY_KEYBIND_DEVICE`: Apply a set of keybinds providing basic device controlling (e.g. speaker and backlight).
+  * `HYPERWAY_KEYBIND_SUGGESTAPP`: Apply a set of keybinds to launch the suggested applications. They are dependencies of `hyperway-keybind-basicapp` package.
+  * `HYPERWAY_KEYBIND_UTIL`: Apply a set of keybinds related to look and feel and other things not so important.
+    > Current utility binding has:
+    > * `SUPER + CTRL + SHIFT + D` for toggling dark themes
+    > * `SUPER + L` for `hyprlock` (If you want, you have to manually install and configure it)
+  * `HYPERWAY_WORKSPACE_DEFAULTRULE`: Apply a set of rules.
+    > * Disable blurring for all applications.
+    > * Allow tearing for games and wine apps. Currently there are `.*minecraft.*` and `^(steam_app).*`.
+    > * Disable animation for layer `gtk4-layer-shell`
 
 These environment variables requires string or number, as it tells the dot how to setup the at least workable interface:
     * `HYPERWAY_APPEARANCE`: The interface. See [Appearance](#appearance).

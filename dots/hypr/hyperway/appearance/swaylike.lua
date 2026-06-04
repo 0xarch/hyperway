@@ -24,7 +24,7 @@ if os.getenv("HYPERWAY_APPEARANCE") and string.upper(os.getenv("HYPERWAY_APPEARA
 
 			dim_inactive = true,
 			dim_strength = 0.05,
-			dim_special = 1,
+			dim_special = 0.3,
 		},
 
 		misc = {
@@ -49,6 +49,8 @@ if os.getenv("HYPERWAY_APPEARANCE") and string.upper(os.getenv("HYPERWAY_APPEARA
 			hide_special_on_workspace_change = true,
 		},
 	})
+
+	hl.workspace_rule({ workspace = "special:special", gaps_out = 30 })
 
 	hl.env("ELECTRON_OZONE_PLATFORM_HINT", "auto")
 	hl.env("QT_QPA_PLATFORM", "wayland;xcb")
