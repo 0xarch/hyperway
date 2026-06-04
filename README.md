@@ -15,10 +15,32 @@ ALMOST all functions requires you to manually enable it by setting the environme
     * `HYPERWAY_KEYBIND_BASICAPP`: Apply a set of keybinds to launch the specific applications. They are dependencies of `hyperway-keybind-basicapp` package.
     * `HYPERWAY_KEYBIND_CONTROL`: Apply a set of keybinds providing basic window management.
     * `HYPERWAY_KEYBIND_DEVICE`: Apply a set of keybinds providing basic device controlling (e.g. speaker and backlight).
+    * `HYPERWAY_KEYBIND_SUGGESTAPP`: Apply a set of keybinds to launch the suggested applications. They are dependencies of `hyperway-keybind-basicapp` package.
 
 These environment variables MUST BE FILLED, as it tells the dot how to setup the at least workable interface:
     * `HYPERWAY_APPEARANCE`: The interface. For now it has to be undefined or `swaylike`, The Swaylike appearance provides interface which looks like sway but with some improvements. If not defined, no tweaks related to appearance will be applied, and all applications use the default theme.
     * `HYPERWAY_WORKSPACE_COUNT`: How many workspaces you want. Keybinds for `SUPER + i`, `SUPER + SHIFT + i`, `SUPER + ALT + i` will be registered. Also waybar will display persistent workspaces in this count.
+
+## Packages
+
+The `hyperway-meta` contains:
+    * mako (autostart)
+    * hyprland (start by greet daemons)
+    * waybar (autostart)
+    * swayosd (autostart)
+    * swaybg (requires your manual configuring)
+
+The `hyperway-keybind-basicapp` contains:
+    * hyprpicker (`SUPER + SHIFT + C`)
+    * kitty (`SUPER + Return`)
+    * fuzzel (`SUPER`)
+    * hyprshot (`SUPER + SHIFT + S` (region), `Print` (screen))
+
+The `hyperway-keybind-suggest-app` contains:
+    * dolphin (`SUPER + E`)
+    * chromium (`SUPER + W`)
+    * pavucontrol-qt (`SUPER + M`)
+    * plasma-workspace (optionally used in waybar darkmode module)
 
 ## NO CONTRIBUTION
 

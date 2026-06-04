@@ -67,7 +67,7 @@
         "format": "{name}{icon}",
         "format-icons": {
             "locked": "[<span color='#00ff00'>X</span>]",
-            "unlocked": "[]"
+            "unlocked": "[<span color='#888888'>-</span>]"
         }
     },
     "sway/scratchpad": {
