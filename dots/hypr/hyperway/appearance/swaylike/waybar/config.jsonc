@@ -3,6 +3,7 @@
     // "layer": "top", // Waybar at top layer
     // "position": "bottom", // Waybar position (top|bottom|left|right)
     // "width": 1280, // Waybar width
+    "height": 32,
     "spacing": 0, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": [
@@ -13,7 +14,8 @@
     "modules-center": [
     ],
     "modules-right": [
-        "mpd",
+        "custom/darkmode",
+        // "mpd",
         "idle_inhibitor",
         "pulseaudio",
         "backlight",
@@ -224,5 +226,11 @@
         //   "suspend": "systemctl suspend",
         //   "hibernate": "systemctl hibernate"
         // }
+    },
+    "custom/darkmode": {
+        "exec": "$HOME/.config/hypr/hyperway/util/darkmode/output.sh",
+        "on-click": "$HOME/.config/hypr/hyperway/util/darkmode/toggle.sh",
+        "signal": 77,
+        "interval": "once",
     }
 }
