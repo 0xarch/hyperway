@@ -10,6 +10,7 @@ if os.getenv("HYPERWAY_APPEARANCE") and string.upper(os.getenv("HYPERWAY_APPEARA
 			layout = "dwindle",
 			resize_on_border = true,
 			hover_icon_on_border = true,
+			extend_border_grab_area = 6,
 		},
 
 		decoration = {
@@ -48,4 +49,9 @@ if os.getenv("HYPERWAY_APPEARANCE") and string.upper(os.getenv("HYPERWAY_APPEARA
 			hide_special_on_workspace_change = true,
 		},
 	})
+
+	hl.env("ELECTRON_OZONE_PLATFORM_HINT", "auto")
+	hl.env("QT_QPA_PLATFORM", "wayland;xcb")
+	hl.env("QT_QPA_PLATFORMTHEME", "kde")
+	hl.env("XDG_MENU_PREFIX", "plasma-")
 end
