@@ -22,5 +22,8 @@ if os.getenv("HYPERWAY_KEYBIND_CONTROL") == "1" then
 	hl.bind("SUPER + F", hl.dsp.window.fullscreen({ mode = "fullscreen", action = "toggle" }))
 	hl.bind("SUPER + Semicolon", hl.dsp.layout("splitratio -0.1"), { repeating = true })
 	hl.bind("SUPER + Apostrophe", hl.dsp.layout("splitratio +0.1"), { repeating = true })
+	-- SPECIAL WORKSPACE --
+	hl.bind("SUPER + ALT + S", hl.dsp.window.move({ workspace = "special", follow = false }))
+	hl.bind("SUPER + S", hl.dsp.workspace.toggle_special())
 	-- END --
 end
