@@ -17,7 +17,7 @@ ALMOST all functions requires you to manually enable it by setting the environme
     * `HYPERWAY_KEYBIND_DEVICE`: Apply a set of keybinds providing basic device controlling (e.g. speaker and backlight).
 
 These environment variables MUST BE FILLED, as it tells the dot how to setup the at least workable interface:
-    * `HYPERWAY_APPEARANCE`: The interface. For now it has to be undefined or `swaylike`, The Swaylike appearance provides interface which looks like sway but with some improvements.
+    * `HYPERWAY_APPEARANCE`: The interface. For now it has to be undefined or `swaylike`, The Swaylike appearance provides interface which looks like sway but with some improvements. If not defined, no tweaks related to appearance will be applied, and all applications use the default theme.
     * `HYPERWAY_WORKSPACE_COUNT`: How many workspaces you want. Keybinds for `SUPER + i`, `SUPER + SHIFT + i`, `SUPER + ALT + i` will be registered. Also waybar will display persistent workspaces in this count.
 
 ## NO CONTRIBUTION
