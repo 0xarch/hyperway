@@ -23,8 +23,6 @@ cp $CONFIG_DIR/config.jsonc $PARSED_CONFIG
 
 sed -i "s|%%PERSISTENT%%|$persistent_json|" $PARSED_CONFIG
 
-# waybar -c "$PARSED_CONFIG" -s "$CONFIG_DIR/style.css"
-
-waybar
+waybar -c "$PARSED_CONFIG" -s "$CONFIG_DIR/style.css"
 
 # rm $PARSED_CONFIG

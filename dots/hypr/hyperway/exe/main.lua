@@ -1,5 +1,9 @@
 CONFIG_DIR = "~/.config/hypr/hyperway/exe/"
 
+if os.getenv("HYPERWAY_APPEARANCE") then
+	CONFIG_DIR = "~/.config/hypr/hyperway/appearance/" .. os.getenv("HYPERWAY_APPEARANCE") .. "/"
+end
+
 if os.getenv("HYPERWAY_EXE_DEFAULT") == "1" then
 	hl.on("hyprland.start", function()
 		hl.exec_cmd("mako -c " .. CONFIG_DIR .. "mako/config")
