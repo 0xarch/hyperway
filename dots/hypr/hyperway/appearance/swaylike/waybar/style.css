@@ -87,13 +87,13 @@ button:hover {
 #scratchpad,
 #power-profiles-daemon,
 #mpd {
-    padding: 0 4px;
+    padding: 0 2px;
     color: #ffffff;
 }
 
 #window,
 #workspaces {
-    margin: 0 4px;
+    margin: 0 2px;
 }
 
 /* If workspaces is the leftmost module, omit left margin */
@@ -278,12 +278,12 @@ button:hover {
     /* background: #97e1ad; */
     /* color: #000000; */
     padding: 0 0px;
-    margin: 0 5px;
+    margin: 0 2px;
     min-width: 16px;
 }
 
 #keyboard-state > label {
-    padding: 0 5px;
+    padding: 0 2px;
 }
 
 /* #keyboard-state > label.locked { */
