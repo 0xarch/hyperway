@@ -1,3 +1,6 @@
+CONFIG_DIR = "~/.config/hypr/hyperway"
+UTIL_DIR = CONFIG_DIR .. "/util"
+
 if os.getenv("HYPERWAY_KEYBIND_DEVICE") == "1" then
 	hl.bind(
 		"XF86MonBrightnessUp",
@@ -24,9 +27,10 @@ if os.getenv("HYPERWAY_KEYBIND_DEVICE") == "1" then
 		hl.dsp.exec_cmd("swayosd-client --output-volume mute-toggle"),
 		{ locked = true, repeating = true }
 	)
+	-- swayosd cannot mute mics. fallback
 	hl.bind(
 		"XF86AudioMicMute",
-		hl.dsp.exec_cmd("swayosd-client --input-volume mute-toggle"),
+		hl.dsp.exec_cmd(UTIL_DIR .. "/mic_manage/mute.sh"),
 		{ locked = true, repeating = true }
 	)
 end
