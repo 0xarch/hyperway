@@ -60,6 +60,13 @@ if os.getenv("HYPERWAY_APPEARANCE") and string.upper(os.getenv("HYPERWAY_APPEARA
 	})
 
 	hl.animation({
+		leaf = "layers",
+		enabled = true,
+		speed = 1,
+		bezier = "default",
+	})
+
+	hl.animation({
 		leaf = "workspaces",
 		enabled = true,
 		speed = 10,
