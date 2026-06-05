@@ -82,6 +82,7 @@ The `hyperway-keybind-basicapp` contains:
   * kitty (`SUPER + Return`)
   * fuzzel (`SUPER`)
   * hyprshot (`SUPER + SHIFT + S` (region), `Print` (screen))
+  * wlogout (`SUPER + SHIFT + E`)
 
 The `hyperway-keybind-suggest-app` contains:
   * dolphin (`SUPER + E`)
