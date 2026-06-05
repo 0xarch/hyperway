@@ -54,9 +54,9 @@ The default (unspecified or not included above) brings you the default configura
 
 ![Swaylike example picture](./asset/hyperway.png)
 
-Style set included the original sway colors (#285577, #4C7899) in almost all components.
+Style set included the original sway colors (#285577, #4C7899) in almost all components. No rounded corner, no blur, very less animation.
 
-Suggest packages to install: `ttf-firacode-nerd`
+Suggested packages to install: `ttf-firacode-nerd`
 
 The default bar setup:
 ```
