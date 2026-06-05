@@ -12,9 +12,12 @@ fi
 
 if [ "$WALLPAPER" != "" ]; then
   PREV_PROC=$(pgrep swaybg)
-  swaybg -m fill -i "$WALLPAPER" &
+  (
+    swaybg -m fill -i "$WALLPAPER"
+    sleep 0.1
+    kill $PREV_PROC
+  ) &
   disown -h
-  kill $PREV_PROC
 fi
 
 exit 0
