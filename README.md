@@ -76,6 +76,7 @@ The `hyperway-meta` contains:
   * waybar (autostart)
   * swayosd (autostart)
   * swaybg (Used in darkmode utils, for Wallpaper displaying)
+  * bc (Used to calculate things in scripts)
 
 The `hyperway-keybind-basicapp` contains:
   * hyprpicker (`SUPER + SHIFT + C`)
@@ -89,6 +90,8 @@ The `hyperway-keybind-suggest-app` contains:
   * chromium (`SUPER + W`)
   * pavucontrol-qt (`SUPER + M`)
   * plasma-workspace (optionally used in darkmode utils, for Qt apps)
+
+There are also optional packages: `hyperway-kde` and `hyperway-kde-app` which provides useful tools maintained by KDE.
 
 ## Extra Providing
 

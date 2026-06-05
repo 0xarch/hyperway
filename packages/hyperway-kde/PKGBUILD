@@ -1,0 +1,13 @@
+groups=(hyperway-dots)
+pkgname=hyperway-kde
+pkgver=1.0
+pkgrel=1
+pkgdesc="KDE Integration Meta package for Hyperway"
+arch=(any)
+license=(None)
+depends=(
+  xdg-desktop-portal-kde
+  polkit-kde-agent
+  networkmanager
+  gnome-keyring # how the fuck you use this
+)

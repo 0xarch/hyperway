@@ -1,0 +1,15 @@
+groups=(hyperway-dots)
+pkgname=hyperway-kde-app
+pkgver=1.0
+pkgrel=1
+pkgdesc="Suggested KDE apps' meta package for Hyperway"
+arch=(any)
+license=(None)
+depends=(
+  kdialog
+  ark
+  gwenview
+  kdenlive
+  kolourpaint
+  okular
+)
