@@ -11,13 +11,13 @@ if is_dark_mode_now; then
 fi
 
 if [ "$WALLPAPER" != "" ]; then
-  PREV_PROC=$(pgrep swaybg)
   (
-    swaybg -m fill -i "$WALLPAPER"
-    sleep 0.1
+    PREV_PROC=$(pgrep swaybg)
+    swaybg -m fill -i "$WALLPAPER" &
+    sleep 0.5
     kill $PREV_PROC
   ) &
-  disown -h
+  disown
 fi
 
 exit 0
