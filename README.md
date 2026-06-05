@@ -63,7 +63,7 @@ The default bar setup:
 Left: (ltr)
 <Workspaces> [<windowClass>] <windowTitle>
 Right: (ltr)
-[<colorMode>] | <OutputVolume> <InputVolume> <BackLight> | <signalStrength> <connectName> | CPU<cpuUsage>(<cpuLoad>) MEM<memUsage>(<memUsed>/<memTotal>) SWAP<swapUsage>(<swapUsed>/<swapTotal>) | <capsLock> <numLock> <batteryPercent> <betteryStat> <dateTime> | <trays>
+[<colorMode>] | <OutputVolume> <InputVolume> <BackLight> | <signalStrength> <connectName> | CPU<cpuUsage>(<cpuLoad>) MEM<memUsage>(<memUsed>/<memTotal>)+<swapUsage>(<swapUsed>/<swapTotal>) | <capsLock> <numLock> <batteryPercent> <betteryStat> <dateTime> | <trays>
 ```
 
 ## Packages

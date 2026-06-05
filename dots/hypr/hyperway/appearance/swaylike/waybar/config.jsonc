@@ -4,8 +4,7 @@
     "spacing": 0, // Gaps between modules (4px)
     "modules-left": [
         "hyprland/workspaces",
-        "hyprland/submap",
-        "hyprland/window"
+        "hyprland/window",
     ],
     "modules-center": [
     ],
@@ -136,7 +135,7 @@
     },
     "memory": {
         "interval": 1.5,
-        "format": "{icon}{percentage}%({used}G/{total}G) <span color='#888800'>SWAP</span>{swapPercentage}%({swapUsed}G/{swapTotal}G)",
+        "format": "{icon}{percentage}%({used}G/{total}G)<span color='#aaaaaa'>+{swapPercentage}%({swapUsed}G/{swapTotal}G)</span>",
         "format-icons": [ "<span color='#00ff00'>MEM</span>", "<span color='#88ff00'>MEM</span>", "<span color='#ffff00'>MEM</span>", "<span color='#ff8800'>MEM</span>", "<span color='#ff0000'>MEM</span>"]
     },
     "temperature": {
