@@ -95,7 +95,7 @@ There are also optional packages: `hyperway-kde` and `hyperway-kde-app` which pr
 
 ## Extra Providing
 
-There's also a hyprlock configuration file. It contains a simple, quick hyprlock interface. You can copy or link this.
+There's also hyprlock and fuzzel configuration file. Both contain a simple, quick interface. You can copy or link.
 
 ## NO CONTRIBUTION
 
