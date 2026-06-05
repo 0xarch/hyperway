@@ -1,6 +1,7 @@
 if os.getenv("HYPERWAY_KEYBIND_CONTROL") == "1" then
 	-- WINDOW ACTION --
 	hl.bind("SUPER + Q", hl.dsp.window.close())
+	hl.bind("SUPER + SHIFT + ALT + Q", hl.dsp.exec_cmd("hyprctl kill"))
 
 	-- FOCUS ACTION --
 	for _, x in ipairs({ "left", "right", "up", "down" }) do
