@@ -66,24 +66,15 @@ button:hover {
     /* background-color: #64727D; */
 }
 
-#clock,
-#battery,
-#cpu,
-#memory,
 #disk,
 #temperature,
 #backlight,
-#network,
 #pulseaudio,
 #wireplumber,
 #custom-media,
-#tray,
-#mode,
 #idle_inhibitor,
-#scratchpad,
-#power-profiles-daemon,
 #mpd {
-    padding: 0 2px;
+    padding: 0 4px;
 }
 
 #workspaces {
@@ -247,13 +238,10 @@ window#waybar.empty #network.disconnected {
 }
 
 #keyboard-state {
-    padding: 0 0px;
-    margin: 0 2px;
     min-width: 16px;
 }
 
 #keyboard-state > label {
-  padding: 0 2px;
   color: #888888;
 }
 
@@ -292,3 +280,8 @@ window#waybar.empty #keyboard-state > label.locked {
 /* #privacy-item.audio-out { */
 /*     background-color: #0069d4; */
 /* } */
+
+#custom-space {
+    color: #888888;
+    padding: 0 3px;
+}

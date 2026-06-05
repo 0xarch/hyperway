@@ -28,7 +28,7 @@
         "tray",
     ],
     "custom/space": {
-      "format": " <span color='#888888'>|</span> ",
+      "format": "|",
     },
     "hyprland/workspaces": {
       "disable-scroll": false,
