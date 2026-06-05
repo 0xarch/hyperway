@@ -25,52 +25,69 @@ The rest functions requires you to manually enable it by setting the environment
   * `HYPERWAY_KEYBIND_CONTROL`: Apply a set of keybinds providing basic window management.
   * `HYPERWAY_KEYBIND_DEVICE`: Apply a set of keybinds providing basic device controlling (e.g. speaker and backlight).
   * `HYPERWAY_KEYBIND_SUGGESTAPP`: Apply a set of keybinds to launch the suggested applications. They are dependencies of `hyperway-keybind-basicapp` package.
-  * `HYPERWAY_KEYBIND_UTIL`: Apply a set of keybinds related to look and feel and other things not so important.
+  * `HYPERWAY_KEYBIND_UTIL`: Apply a set of keybinds related to look and feel but not so important.
     > Current utility binding has:
-    > * `SUPER + CTRL + SHIFT + D` for toggling dark themes
-    > * `SUPER + L` for `hyprlock` (If you want, you have to manually install and configure it)
+    > * `SUPER + CTRL + SHIFT + D` for toggling dark themes.
+    > * `SUPER + L` for `hyprlock` (If you want, you have to manually install and configure it).
+    > * `SUPEP + CTRL + <mouse wheel>` for zoom in and out.
   * `HYPERWAY_WORKSPACE_DEFAULTRULE`: Apply a set of rules.
     > * Disable blurring for all applications.
     > * Allow tearing for games and wine apps. Currently there are `.*minecraft.*` and `^(steam_app).*`.
     > * Disable animation for layer `gtk4-layer-shell`
 
-These environment variables requires string or number, as it tells the dot how to setup the at least workable interface:
-    * `HYPERWAY_APPEARANCE`, `HYPERWAY_APPEARANCE_*`: The interface. See [Appearance](#appearance).
-    * `HYPERWAY_WORKSPACE_COUNT`: How many workspaces you want. Keybinds for `SUPER + i`, `SUPER + SHIFT + i`, `SUPER + ALT + i` will be registered. Also waybar will display persistent workspaces in this count. Defaults to 10.
+These environment variables requires string or number, as it tells the dot how to setup the workable interface:
+  * `HYPERWAY_APPEARANCE`, `HYPERWAY_APPEARANCE_*`: The interface. See [Appearance](#appearance).
+  * `HYPERWAY_WORKSPACE_COUNT`: How many workspaces you want. Keybinds for `SUPER + i`, `SUPER + SHIFT + i`, `SUPER + ALT + i` will be registered. Also waybar will display persistent workspaces in this count. Defaults to 10. Max = 10 or it will cause register problems.
 
 ## Appearance
 
 The `HYPERWAY_APPEARANCE` specifies the appearance. It has to be set before you include Hyperway in your configuration file.
 
 For now you can choose:
-    * `swaylike`: Clean SwayWM interface, but with hyprland animations.
+  * [`swaylike`](#swaylike): Clean SwayWM-like interface, with tweaked quick animations.
 
 The default (unspecified or not included above) brings you the default configuration of a minimum DE deps: `waybar`, `swayosd`, `mako`. They are using the copied default files.
 
 `HYPERWAY_APPEARANCE_WALLPAPER_LIGHT` and `HYPERWAY_APPEARANCE_WALLPAPER_DARK` specifies the wallpaper you want. No wallpaper will be used if not specified. Switching is automatically done through darkmode utils.
+
+### Swaylike
+
+![Swaylike example picture](./asset/hyperway.png)
+
+Style set included the original sway colors (#285577, #4C7899) in almost all components.
+
+Suggest packages to install: `ttf-firacode-nerd`
+
+The default bar setup:
+```
+Left: (ltr)
+<Workspaces> [<windowClass>] <windowTitle>
+Right: (ltr)
+[<colorMode>] | <OutputVolume> <InputVolume> <BackLight> | <signalStrength> <connectName> | CPU<cpuUsage>(<cpuLoad>) MEM<memUsage>(<memUsed>/<memTotal>) SWAP<swapUsage>(<swapUsed>/<swapTotal>) | <capsLock> <numLock> <batteryPercent> <betteryStat> <dateTime> | <trays>
+```
 
 ## Packages
 
 You can find these packages in `packages` directory.
 
 The `hyperway-meta` contains:
-    * mako (autostart)
-    * hyprland (start by greet daemons)
-    * waybar (autostart)
-    * swayosd (autostart)
-    * swaybg (Used in darkmode utils, for Wallpaper displaying)
+  * mako (autostart)
+  * hyprland (start by greet daemons)
+  * waybar (autostart)
+  * swayosd (autostart)
+  * swaybg (Used in darkmode utils, for Wallpaper displaying)
 
 The `hyperway-keybind-basicapp` contains:
-    * hyprpicker (`SUPER + SHIFT + C`)
-    * kitty (`SUPER + Return`)
-    * fuzzel (`SUPER`)
-    * hyprshot (`SUPER + SHIFT + S` (region), `Print` (screen))
+  * hyprpicker (`SUPER + SHIFT + C`)
+  * kitty (`SUPER + Return`)
+  * fuzzel (`SUPER`)
+  * hyprshot (`SUPER + SHIFT + S` (region), `Print` (screen))
 
 The `hyperway-keybind-suggest-app` contains:
-    * dolphin (`SUPER + E`)
-    * chromium (`SUPER + W`)
-    * pavucontrol-qt (`SUPER + M`)
-    * plasma-workspace (optionally used in darkmode utils, for Qt apps)
+  * dolphin (`SUPER + E`)
+  * chromium (`SUPER + W`)
+  * pavucontrol-qt (`SUPER + M`)
+  * plasma-workspace (optionally used in darkmode utils, for Qt apps)
 
 ## Extra Providing
 
