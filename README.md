@@ -97,4 +97,4 @@ There's also a hyprlock configuration file. It contains a simple, quick hyprlock
 
 This is the dot that SUIT MY WORKFLOW and I did as much modulizing as I can. You can copy any of these files to your own dotfile.
 
-All configuration files (Without the README) is CC-0 (Copyleft).
+All configuration files (Without the README and images) is CC-0 (Copyleft).
