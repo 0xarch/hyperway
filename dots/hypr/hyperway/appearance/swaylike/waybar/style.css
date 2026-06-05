@@ -16,8 +16,8 @@ window#waybar.hidden {
 }
 
 window#waybar.empty {
-    background-color: transparent;
-    color: black;
+    background-color: alpha(#111111,0.5);
+    color: #ffffff;
 }
 
 window#waybar.termite {
@@ -51,10 +51,6 @@ button:hover {
     border: 1px solid transparent;
     background-color: transparent;
     color: white;
-}
-
-window#waybar.empty #workspaces button {
-    color: black;
 }
 
 #workspaces button.focused, #workspaces button.active {
