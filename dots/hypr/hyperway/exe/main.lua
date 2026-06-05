@@ -14,6 +14,7 @@ if os.getenv("HYPERWAY_EXE_DEFAULT") == "1" then
 			"swayosd-server --config " .. EXE_DIR .. "/swayosd/config.toml -s " .. EXE_DIR .. "/swayosd/style.css"
 		)
 		hl.exec_cmd("fcitx5 -d")
+		hl.exec_cmd("/usr/lib/polkit-kde-authentication-agent-1")
 		hl.exec_cmd(CONFIG_DIR .. "/util/darkmode/wallpaper.sh")
 	end)
 end
