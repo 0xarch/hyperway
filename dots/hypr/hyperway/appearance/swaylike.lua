@@ -52,6 +52,20 @@ if os.getenv("HYPERWAY_APPEARANCE") and string.upper(os.getenv("HYPERWAY_APPEARA
 
 	hl.workspace_rule({ workspace = "special:special", gaps_out = 30 })
 
+	hl.animation({
+		leaf = "global",
+		enabled = true,
+		speed = 3.5,
+		bezier = "default",
+	})
+
+	hl.animation({
+		leaf = "workspaces",
+		enabled = true,
+		speed = 10,
+		bezier = "default",
+	})
+
 	hl.env("ELECTRON_OZONE_PLATFORM_HINT", "auto")
 	hl.env("QT_QPA_PLATFORM", "wayland;xcb")
 	hl.env("QT_QPA_PLATFORMTHEME", "kde")
