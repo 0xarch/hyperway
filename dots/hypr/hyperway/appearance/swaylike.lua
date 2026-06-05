@@ -20,6 +20,8 @@ if os.getenv("HYPERWAY_APPEARANCE") and string.upper(os.getenv("HYPERWAY_APPEARA
 			blur = {
 				enabled = true,
 				xray = true,
+				size = 8,
+				passes = 2,
 			},
 
 			dim_inactive = true,
