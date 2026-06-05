@@ -242,7 +242,7 @@ window#waybar.empty #network.disconnected {
 }
 
 #keyboard-state > label {
-  color: #888888;
+  color: #666666;
 }
 
 #keyboard-state > label.locked {
