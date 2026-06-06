@@ -151,13 +151,6 @@ button:hover {
     color: #ff0000;
 }
 
-window#waybar.empty #network {
-    color: #008800;
-}
-
-window#waybar.empty #network.disconnected {
-    color: #880000;
-}
 /**/
 /* #wireplumber { */
 /*     background-color: #fff0f5; */
