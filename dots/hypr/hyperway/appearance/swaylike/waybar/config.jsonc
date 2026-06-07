@@ -158,7 +158,7 @@
             "critical": 15
         },
         "format": "{capacity}% {icon} ",
-        "format-full": "{capacity}% {icon} ",
+        "format-full": "FULL{icon} ",
         "format-charging": "{capacity}%<span color='#00ff00'>+</span>{icon} ",
         "format-plugged": "{capacity}% PLUG ",
         "format-alt": "{time} {icon}",
@@ -194,7 +194,7 @@
         "format": "{icon} {volume}% {format_source}",
         "format-bluetooth": "{icon} {volume}% {format_source}",
         "format-bluetooth-muted": "{icon}  {format_source}",
-        "format-muted": "<span color='#ff0000'>MUTE</span> {format_source}",
+        "format-muted": "<span color='#ff0000'> </span>{format_source}",
         "format-source": " {volume}%",
         "format-source-muted": "<span color='#ff0000'> </span>",
         "format-icons": {
