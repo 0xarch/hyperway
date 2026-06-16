@@ -1,8 +1,8 @@
 groups=(hyperway-dots)
 pkgname=hyperway-keybind-suggest-app
 pkgver=1.0
-pkgrel=2
-pkgdesc="Meta package for Hyperway"
+pkgrel=3
+pkgdesc="Suggested package for Hyperway"
 arch=(any)
 license=(None)
 depends=(
@@ -11,4 +11,6 @@ depends=(
   pavucontrol-qt
   plasma-workspace
   wf-recorder
+  cliphist
+  fuzzel
 )

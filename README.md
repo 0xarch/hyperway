@@ -89,6 +89,7 @@ The `hyperway-keybind-suggest-app` contains:
   * dolphin (`SUPER + E`)
   * chromium (`SUPER + W`)
   * pavucontrol-qt (`SUPER + M`)
+  * cliphist (`SUPER + V`, works along with fuzzel)
   * plasma-workspace (optionally used in darkmode utils, for Qt apps)
   * wf-recorder (`SUPER + SHIFT + R`)
 

@@ -5,5 +5,9 @@ if os.getenv("HYPERWAY_KEYBIND_SUGGESTAPP") == "1" then
 	hl.bind("SUPER + E", hl.dsp.exec_cmd("dolphin"))
 	hl.bind("SUPER + W", hl.dsp.exec_cmd("chromium"))
 	hl.bind("SUPER + M", hl.dsp.exec_cmd("pavucontrol-qt"))
+	hl.bind(
+		"SUPER + V",
+		hl.dsp.exec_cmd("cliphist decode $(cliphist list | fuzzel -l 15 -d -p 'clipboard:' -I | awk '{print $1}')")
+	)
 	hl.bind("SUPER + SHIFT + R", hl.dsp.exec_cmd(UTIL_DIR .. "/screen/record.sh"))
 end
