@@ -1,7 +1,7 @@
 groups=(hyperway-dots)
 pkgname=hyperway-keybind-suggest-app
 pkgver=1.0
-pkgrel=1
+pkgrel=2
 pkgdesc="Meta package for Hyperway"
 arch=(any)
 license=(None)
@@ -10,4 +10,5 @@ depends=(
   chromium
   pavucontrol-qt
   plasma-workspace
+  wf-recorder
 )

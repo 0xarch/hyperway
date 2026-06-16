@@ -24,7 +24,7 @@ The rest functions requires you to manually enable it by setting the environment
   * `HYPERWAY_KEYBIND_BASICAPP`: Apply a set of keybinds to launch the specific applications. They are dependencies of `hyperway-keybind-basicapp` package.
   * `HYPERWAY_KEYBIND_CONTROL`: Apply a set of keybinds providing basic window management.
   * `HYPERWAY_KEYBIND_DEVICE`: Apply a set of keybinds providing basic device controlling (e.g. speaker and backlight).
-  * `HYPERWAY_KEYBIND_SUGGESTAPP`: Apply a set of keybinds to launch the suggested applications. They are dependencies of `hyperway-keybind-basicapp` package.
+  * `HYPERWAY_KEYBIND_SUGGESTAPP`: Apply a set of keybinds to launch the suggested applications. They are dependencies of `hyperway-keybind-suggest-app` package.
   * `HYPERWAY_KEYBIND_UTIL`: Apply a set of keybinds related to look and feel but not so important.
     > Current utility binding has:
     > * `SUPER + CTRL + SHIFT + D` for toggling dark themes.
@@ -90,6 +90,7 @@ The `hyperway-keybind-suggest-app` contains:
   * chromium (`SUPER + W`)
   * pavucontrol-qt (`SUPER + M`)
   * plasma-workspace (optionally used in darkmode utils, for Qt apps)
+  * wf-recorder (`SUPER + SHIFT + R`)
 
 There are also optional packages: `hyperway-kde` and `hyperway-kde-app` which provides useful tools maintained by KDE.
 
