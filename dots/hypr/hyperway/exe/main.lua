@@ -15,7 +15,9 @@ if os.getenv("HYPERWAY_EXE_DEFAULT") == "1" then
 		)
 		hl.exec_cmd("fcitx5 -d")
 		hl.exec_cmd("/usr/lib/polkit-kde-authentication-agent-1")
+		hl.exec_cmd("/usr/lib/xdg-desktop-portal")
 		hl.exec_cmd("kded6")
 		hl.exec_cmd(CONFIG_DIR .. "/util/darkmode/wallpaper.sh")
+		hl.exec_cmd(CONFIG_DIR .. "/util/workspace/listener.sh")
 	end)
 end
