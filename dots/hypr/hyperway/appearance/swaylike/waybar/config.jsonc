@@ -3,7 +3,8 @@
     "height": 32,
     "spacing": 0, // Gaps between modules (4px)
     "modules-left": [
-        "hyprland/workspaces",
+        // "hyprland/workspaces",
+        %%WORKSPACE_LIST%%
         "hyprland/window",
     ],
     "modules-center": [
@@ -30,6 +31,10 @@
     "custom/space": {
       "format": "|",
     },
+    "custom/workspace": {
+      "on-scroll-up": "hyprctl dispatch 'hl.dsp.focus({workspace=\"-1\"})'",
+      "on-scroll-down": "hyprctl dispatch 'hl.dsp.focus({workspace=\"+1\"})'", 
+    },
     "hyprland/workspaces": {
       "disable-scroll": false,
       "on-scroll-up": "hyprctl dispatch 'hl.dsp.focus({workspace=\"-1\"})'",
@@ -44,6 +49,7 @@
       "on-scroll-down": "hyprctl dispatch 'hl.dsp.focus({workspace=\"+1\"})'",
       "format": "[{class}] {title}",
     },
+    %%WORKSPACE%%
     // Modules configuration
     // "sway/workspaces": {
     //     "disable-scroll": true,
