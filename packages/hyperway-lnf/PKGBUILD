@@ -1,0 +1,14 @@
+groups=(hyperway-dots)
+pkgname=hyperway-lnf
+pkgver=1.0
+pkgrel=1
+pkgdesc="Look and feel package for Hyperway"
+arch=(any)
+license=(None)
+depends=(
+  eza
+  starship
+  ttf-readex-pro
+  ttf-twemoji
+  ttf-firacode-nerd
+)

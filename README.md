@@ -92,7 +92,9 @@ The `hyperway-keybind-suggest-app` contains:
   * plasma-workspace (optionally used in darkmode utils, for Qt apps)
   * wf-recorder (`SUPER + SHIFT + R`)
 
-There are also optional packages: `hyperway-kde` and `hyperway-kde-app` which provides useful tools maintained by KDE.
+There are also optional packages:
+  * `hyperway-kde` and `hyperway-kde-app` provide you useful tools maintained by KDE.
+  * `hyperway-lnf` provides you essential things to make your workspace (looks) more powerful.
 
 ## Extra Providing
 
