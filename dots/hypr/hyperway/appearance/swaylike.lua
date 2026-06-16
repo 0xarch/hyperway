@@ -54,10 +54,15 @@ if os.getenv("HYPERWAY_APPEARANCE") and string.upper(os.getenv("HYPERWAY_APPEARA
 
 	hl.workspace_rule({ workspace = "special:special", gaps_out = 30 })
 
+	hl.curve("default", { type = "bezier", points = {
+		{ 0.5, 0 },
+		{ 0.5, 1 },
+	} })
+
 	hl.animation({
 		leaf = "global",
 		enabled = true,
-		speed = 3.5,
+		speed = 2.5,
 		bezier = "default",
 	})
 
@@ -71,7 +76,7 @@ if os.getenv("HYPERWAY_APPEARANCE") and string.upper(os.getenv("HYPERWAY_APPEARA
 	hl.animation({
 		leaf = "workspaces",
 		enabled = true,
-		speed = 10,
+		speed = 5,
 		bezier = "default",
 	})
 
