@@ -9,5 +9,7 @@ depends=(
   xdg-desktop-portal-kde
   polkit-kde-agent
   networkmanager
+  plasma-integration
+  plasma-workspace
   gnome-keyring # how the fuck you use this
 )

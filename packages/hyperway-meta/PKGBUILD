@@ -1,7 +1,7 @@
 groups=(hyperway-dots)
 pkgname=hyperway-meta
 pkgver=1.0
-pkgrel=2
+pkgrel=3
 pkgdesc="Meta package for Hyperway"
 arch=(any)
 license=(None)
@@ -12,5 +12,6 @@ depends=(
   swayosd
   swaybg
   bc
+  socat
   xdg-desktop-portal-hyprland
 )
