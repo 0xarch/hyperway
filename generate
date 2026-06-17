@@ -1,0 +1,8 @@
+#!/bin/bash
+
+SCRIPT_DIR=$(dirname ${BASH_SOURCE[0]})
+
+cd $SCRIPT_DIR
+
+./dots/hypr/hyperway/util/listener/build.sh
+./dots/hypr/hyperway/util/workspace/build.sh

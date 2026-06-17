@@ -1,21 +1,27 @@
 # Hyperway
 
+# WARNINGS
+
+As AUR is suffering from various attacks (like Atomic Arch), I do not recommend you to use this dot right now, as some of its (optional) dependencies are in AUR (e.g. wlogout)
+
 Hyperway is a set of dots that is used by 0xarch for Hyprland WM on Archlinux.
 
 The main keybinding is inspired by [illogical-impulse](https://github.com/end-4/dots-hyprland).
 
 If you want this too:
   * Clone this repository.
-  * Install package `packages/hyperway-meta`. (This provides you the default apps and Hyprland itself)
+  * Make & install package `packages/hyperway-meta`. (This provides you the default apps and Hyprland itself)
+  * Run `./generate`. (This compiles two tiny C programs which replaces the original `hyprland/workspaces` widget for Waybar)
   * Link `dots/hypr/hyperway` to `~/.config/hypr/hyperway`
-  * Require `hyperway.main` in your `hyprland.lua` config file.
+  * Require `hyperway.main` in your `hyprland.lua` configuration file.
 
 ## Functions
 
-Basically, after you did a simple setup with nothing modified, you can get only 10*3 registered workspace keybindings, they are:
+Basically, after you did a simple setup with nothing modified, you can get only 10*3 registered workspace keybindings, 4 autorun apps (with default profile), they are:
   * `SUPER + $i`: go to workspace `i`
   * `SUPER + SHIFT + $i`: bring the current window to workspace `i` with focus
   * `SUPER + ALT + $i`: bring the current window to workspace `i`
+  * waybar, swayosd, mako, swaybg
 
 The rest functions requires you to manually enable it by setting the environment variables to `1` and some requires other executables:
   * `HYPERWAY_EXE_DEFAULT`: Set up the default startup applications. Most of these applications (except `fcitx5`) is dependencies of `hyperway-meta`.

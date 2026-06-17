@@ -16,7 +16,7 @@ workspace_conf=""
 for i in $(seq 1 $COUNT); do
   persistent_json+="\"$i\": true, "
   workspace_list+="\"custom/workspace#$i\","
-  workspace_conf+="\"custom/workspace#$i\": { \"on-scroll-down\": \"hyprctl dispatch 'hl.dsp.focus({workspace=\\\\\\\"+1\\\\\\\"})'\", \"on-scroll-up\": \"hyprctl dispatch 'hl.dsp.focus({workspace=-1})'\", \"on-click\": \"hyprctl dispatch 'hl.dsp.focus({workspace=$i})'\", \"exec\": \"\$HOME/.config/hypr/hyperway/util/workspace/waybar.sh $i\", \"signal\": 29},"
+  workspace_conf+="\"custom/workspace#$i\": { \"on-scroll-down\": \"hyprctl dispatch 'hl.dsp.focus({workspace=\\\\\\\"+1\\\\\\\"})'\", \"on-scroll-up\": \"hyprctl dispatch 'hl.dsp.focus({workspace=-1})'\", \"on-click\": \"hyprctl dispatch 'hl.dsp.focus({workspace=$i})'\", \"exec\": \"\$HOME/.config/hypr/hyperway/util/workspace/waybar_output $i\", \"signal\": 29},"
 done
 persistent_json=${persistent_json%, }
 # persistent_json+="}"
