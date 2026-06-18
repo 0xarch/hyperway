@@ -65,22 +65,22 @@ int main(int argc, char *argv[]) {
             snprintf(char_b, sizeof(char_b), "%s", tmp);
         }
 
-        snprintf(char_c, sizeof(char_c), "</span> ");
+        snprintf(char_c, sizeof(char_c), index == 10 ? " </span>" : "</span>");
     } else {
         if (index == active) {
             snprintf(char_a, sizeof(char_a), "<span color='#00ff00'>[");
             if (index == 10) {
                 snprintf(char_c, sizeof(char_c), "]</span>");
             } else {
-                snprintf(char_c, sizeof(char_c), "]</span> ");
+                snprintf(char_c, sizeof(char_c), "]</span>");
             }
         } else {
             snprintf(char_a, sizeof(char_a), "<span color='#aaaaaa'> ");
-            if (index == 10) {
-                snprintf(char_c, sizeof(char_c), "</span> ");
-            } else {
-                snprintf(char_c, sizeof(char_c), "</span>  ");
-            }
+            //if (index == 10) {
+            snprintf(char_c, sizeof(char_c), "</span> ");
+            //} else {
+            //    snprintf(char_c, sizeof(char_c), "</span> ");
+            //}
         }
         snprintf(char_b, sizeof(char_b), "%d", index);
     }
