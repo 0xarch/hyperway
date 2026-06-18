@@ -12,6 +12,6 @@ depends=(
   swayosd
   swaybg
   bc
-  socat
+  jq
   xdg-desktop-portal-hyprland
 )

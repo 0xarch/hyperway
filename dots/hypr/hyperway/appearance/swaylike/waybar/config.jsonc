@@ -24,8 +24,8 @@
         "keyboard-state",
         "battery",
         "battery#bat2",
-        "clock",
         "custom/space",
+        "clock",
         "tray",
     ],
     "custom/space": {
@@ -35,14 +35,6 @@
       "on-scroll-up": "hyprctl dispatch 'hl.dsp.focus({workspace=\"-1\"})'",
       "on-scroll-down": "hyprctl dispatch 'hl.dsp.focus({workspace=\"+1\"})'", 
     },
-    "hyprland/workspaces": {
-      "disable-scroll": false,
-      "on-scroll-up": "hyprctl dispatch 'hl.dsp.focus({workspace=\"-1\"})'",
-      "on-scroll-down": "hyprctl dispatch 'hl.dsp.focus({workspace=\"+1\"})'",
-      "persistent-workspaces": {
-        %%PERSISTENT%%
-      }
-    },
     "hyprland/window": {
       "disable-scroll": false,
       "on-scroll-up": "hyprctl dispatch 'hl.dsp.focus({workspace=\"-1\"})'",
@@ -51,22 +43,6 @@
     },
     %%WORKSPACE%%
     // Modules configuration
-    // "sway/workspaces": {
-    //     "disable-scroll": true,
-    //     "all-outputs": true,
-    //     "warp-on-scroll": false,
-    //     "format": "{name}: {icon}",
-    //     "format-icons": {
-    //         "1": "",
-    //         "2": "",
-    //         "3": "",
-    //         "4": "",
-    //         "5": "",
-    //         "urgent": "",
-    //         "focused": "",
-    //         "default": ""
-    //     }
-    // },
     "keyboard-state": {
         "numlock": true,
         "capslock": true,
@@ -163,14 +139,14 @@
             "warning": 30,
             "critical": 15
         },
-        "format": "{capacity}% {icon} ",
-        "format-full": "FULL{icon} ",
-        "format-charging": "{capacity}%<span color='#00ff00'>+</span>{icon} ",
-        "format-plugged": "{capacity}% PLUG ",
+        "format": "{capacity}%{icon}",
+        "format-full": "[󰞌]{icon}",
+        "format-charging": "{capacity}%<span color='#00ff00'>+</span>{icon}",
+        "format-plugged": "{capacity}%󰚥",
         "format-alt": "{time} {icon}",
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
-        "format-icons": ["<span color='#ff0000'></span>", "<span color='#ffff00'></span>", "<span color='#88ff00'></span>", "<span color='#00ff00'></span>", "<span color='#00ff00'></span>"]
+        "format-icons": ["<span color='#ff0000'>[󰀦BATTERY CRITICAL󰀦]</span>", "<span color='#ffff00'>[󰀦BATTERY LOW󰀦]</span>", "<span color='#aaff00'>󱊡</span>", "<span color='#88ff00'>󱊢</span>", "<span color='#44ff00'>󱊢</span>", "<span color='#00ff00'>󱊣</span>", "<span color='#00ff00'>󱊣</span>"]
     },
     "battery#bat2": {
         "bat": "BAT2"
@@ -188,11 +164,11 @@
     },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "{signalStrength}% {essid}  ",
-        "format-ethernet": "{ipaddr}/{cidr}  ",
-        "tooltip-format": "{ifname} via {gwaddr}  ",
+        "format-wifi": "{signalStrength}% {ipaddr} 󰖩 ",
+        "format-ethernet": "{ipaddr}/{cidr} 󰈀 ",
+        "tooltip-format": "{ifname} via {gwaddr} {essid} ",
         "format-linked": "{ifname} (No IP)  ",
-        "format-disconnected": "Disconnected ⚠ ",
+        "format-disconnected": "Disconnected 󰅛 ",
         "format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
     "pulseaudio": {

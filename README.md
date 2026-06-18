@@ -81,8 +81,10 @@ The `hyperway-meta` contains:
   * hyprland (start by greet daemons)
   * waybar (autostart)
   * swayosd (autostart)
+  * xdg-desktop-portal-hyprland (autostart)
   * swaybg (Used in darkmode utils, for Wallpaper displaying)
   * bc (Used to calculate things in scripts)
+  * jq (Used to calculate things in scripts)
 
 The `hyperway-keybind-basicapp` contains:
   * hyprpicker (`SUPER + SHIFT + C`)
