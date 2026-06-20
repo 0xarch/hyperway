@@ -1,2 +1,2 @@
 require("hyperway.appearance.swaylike")
-require("hyperway.appearance.gnoe")
+require("hyperway.appearance.swaypure")

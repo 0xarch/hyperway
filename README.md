@@ -1,7 +1,7 @@
 
 # WARNINGS
 
-As AUR is suffering from various attacks (like `Atomic Arch`), **I do not recommend you to use this dotfile** right now, as some of its (optional) dependencies are in AUR and you have to build them (e.g. wlogout)
+As AUR is suffering from various attacks in June (like `Atomic Arch`), **I do not recommend you to use all features this dotfile** right now, as some of its (optional) dependencies are in AUR and you have to build them (e.g. wlogout)
 
 # Hyperway
 
@@ -18,10 +18,10 @@ If you want this too:
 
 ## Functions
 
-Basically, after you did a simple setup with nothing modified, you can get only 10*3 registered workspace keybindings, 4 autorun apps (with default profile), they are:
-  * `SUPER + $i`: go to workspace `i`
-  * `SUPER + SHIFT + $i`: bring the current window to workspace `i` with focus
-  * `SUPER + ALT + $i`: bring the current window to workspace `i`
+Basically, after you did a simple setup with nothing modified, you can get only 10(*3) registered workspace keybindings, 4 autorun apps (with default profile), they are:
+  * `SUPER + $i`: go to workspace `i` (i=1..10, 10=Key 0)
+  * `SUPER + SHIFT + $i`: bring the current window to workspace `i` with focus (i=1..10, 10=Key 0)
+  * `SUPER + ALT + $i`: bring the current window to workspace `i` (i=1..10, 10=Key 0)
   * waybar, swayosd, mako, swaybg
 
 The rest functions requires you to manually enable it by setting the environment variables to `1` and some requires other executables:
@@ -52,6 +52,7 @@ The `HYPERWAY_APPEARANCE` specifies the appearance. It has to be set before you 
 
 For now you can choose:
   * [`swaylike`](#swaylike): Clean SwayWM-like interface, with tweaked quick animations.
+  * [`swaypure`](#swaypure): Almost a sway copy in Hyprland.
 
 The default (unspecified or not included above) brings you the default configuration of a minimum DE deps: `waybar`, `swayosd`, `mako`. They are using the copied default files.
 
@@ -61,7 +62,7 @@ The default (unspecified or not included above) brings you the default configura
 
 ![Swaylike example picture](./asset/hyperway.png)
 
-Style set included the original sway colors (#285577, #4C7899) in almost all components. No rounded corner, no blur, very less animation.
+Style set included the original sway colors (#285577, #4C7899) in almost all components. No rounded corner, very less animation, blur should be manually enabled in specific rules.
 
 It's designed for doing work in a efficient way, not capturing pictures and swinging around. All information you need is on the top bar.
 
@@ -78,6 +79,16 @@ Right: (ltr)
 
 (The 'CPU' and 'MEM' label's colors change along with usage. Low usage = green, High usage = red, also yellow, orange etc.)
 ```
+
+### Swaypure
+
+Style set with sway colors, without any effects. Designed for geeks. Raw Sway Flavour.
+
+If you were just make the decision to move to Hyprland from Sway, this should give you the same feel. No animation, no blur, no decorations.
+
+This theme also contains a environment compatibility fix to Qt apps to make sure they use the correct theme.
+
+The default bar is a `i3status` like displaying. Left is workspace, right is a simulation of default `i3status` config.
 
 ## Packages
 

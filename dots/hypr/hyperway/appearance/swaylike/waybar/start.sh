@@ -25,4 +25,4 @@ sed -i "s|%%WORKSPACE%%|$workspace_conf|" $PARSED_CONFIG
 
 waybar -c "$PARSED_CONFIG" -s "$CONFIG_DIR/style.css"
 
-# rm $PARSED_CONFIG
+rm $PARSED_CONFIG

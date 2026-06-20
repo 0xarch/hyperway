@@ -1,0 +1,52 @@
+// -*- mode: jsonc -*-
+{
+  "height": 28,
+  "modules-left": [
+    "hyprland/workspaces",
+  ],
+  "modules-right": [
+    "network",
+    "custom/space",
+    "disk",
+    "custom/space",
+    "cpu",
+    "custom/space",
+    "memory",
+    "custom/space",
+    "clock",
+    "tray",
+  ],
+  "custom/space": {
+    "format": "   ",
+  },
+  "hyprland/workspaces": {
+    "on-scroll-up": "hyprctl dispatch 'hl.dsp.focus({workspace=\"-1\"})'",
+    "on-scroll-down": "hyprctl dispatch 'hl.dsp.focus({workspace=\"+1\"})'", 
+  },
+  "clock": {
+    "interval": 5,
+    "format": "{:%Y-%m-%d %H:%M:%S}",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "format-alt": "{:%Y-%m-%d}"
+  },
+  "disk": {
+    "format": "{free}",
+  },
+  "cpu": {
+      "interval": 1.5,
+      "format": "{load}",
+      "tooltip": false,
+  },
+  "memory": {
+      "interval": 1.5,
+      "format": "{used}GiB | {avail}GiB",
+  },
+  "network": {
+      "format-wifi": "{ifname} W: ({signalStrength}% at {essid}) {ipaddr}",
+      "format-ethernet": "E: {ipaddr}",
+      "tooltip-format": "{ifname} via {gwaddr} {essid} ",
+      "format-linked": "{ifname} (No IP)  ",
+      "format-disconnected": "W/E: Down",
+      "format-alt": "{ifname}: {ipaddr}/{cidr}"
+  },
+}

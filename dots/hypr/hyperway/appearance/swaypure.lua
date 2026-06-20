@@ -1,15 +1,15 @@
 CONFIG_DIR = "~/.config/hypr/hyperway"
 
-EXE_DIR = CONFIG_DIR .. "/appearance/gnoe"
+EXE_DIR = CONFIG_DIR .. "/appearance/swaypure"
 
-if os.getenv("HYPERWAY_APPEARANCE") and string.upper(os.getenv("HYPERWAY_APPEARANCE")) == "GNOE" then
+if os.getenv("HYPERWAY_APPEARANCE") and string.upper(os.getenv("HYPERWAY_APPEARANCE")) == "SWAYPURE" then
 	hl.config({
 		general = {
-			border_size = 1,
-			gaps_in = 4,
-			gaps_out = 8,
+			border_size = 2,
+			gaps_in = 0,
+			gaps_out = 0,
 			col = {
-				active_border = "#888888",
+				active_border = "#285577",
 			},
 			layout = "dwindle",
 			resize_on_border = true,
@@ -17,15 +17,16 @@ if os.getenv("HYPERWAY_APPEARANCE") and string.upper(os.getenv("HYPERWAY_APPEARA
 			extend_border_grab_area = 6,
 		},
 
+		animations = {
+			enabled = false,
+		},
+
 		decoration = {
-			rounding_power = 2,
-			rounding = 15,
+			rounding_power = 0,
+			rounding = 0,
 
 			blur = {
-				enabled = true,
-				xray = true,
-				size = 8,
-				passes = 2,
+				enabled = false,
 			},
 
 			dim_inactive = true,
@@ -56,33 +57,7 @@ if os.getenv("HYPERWAY_APPEARANCE") and string.upper(os.getenv("HYPERWAY_APPEARA
 		},
 	})
 
-	hl.workspace_rule({ workspace = "special:special", gaps_out = 30 })
-
-	hl.curve("default", { type = "bezier", points = {
-		{ 0.5, 0 },
-		{ 0.5, 1 },
-	} })
-
-	hl.animation({
-		leaf = "global",
-		enabled = true,
-		speed = 2,
-		bezier = "default",
-	})
-
-	hl.animation({
-		leaf = "layers",
-		enabled = true,
-		speed = 1,
-		bezier = "default",
-	})
-
-	hl.animation({
-		leaf = "workspaces",
-		enabled = true,
-		speed = 5,
-		bezier = "default",
-	})
+	hl.workspace_rule({ workspace = "special:special", gaps_out = 100 })
 
 	hl.env("ELECTRON_OZONE_PLATFORM_HINT", "auto")
 	hl.env("QT_QPA_PLATFORM", "wayland;xcb")

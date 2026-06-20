@@ -1,0 +1,66 @@
+* {
+    /* `otf-font-awesome` is required to be installed for icons */
+    font-family: 'FiraCode Nerd Font', FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    font-size: 12px;
+}
+
+window#waybar {
+    background-color: #111111;
+    color: #ffffff;
+}
+
+button {
+    /* Avoid rounded borders under each button name */
+    border: none;
+    border-radius: 0;
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+button:hover {
+    background: inherit;
+}
+
+#workspaces {
+    margin: 0 2px;
+}
+
+#workspaces button {
+    padding: 0 2px;
+    border: 1px solid transparent;
+    background-color: transparent;
+    color: white;
+}
+
+#workspaces button.focused, #workspaces button.active {
+    background-color: #285577;
+    border: 1px solid #4c7899;
+}
+
+#workspaces button.urgent {
+    background-color: #eb4d4b;
+}
+
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 0;
+}
+
+#network {
+    color: #00ff00;
+}
+
+#network.disconnected {
+    color: #ff0000;
+}
+
+#tray {
+    margin: 0 0 0 2px;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: #eb4d4b;
+}
