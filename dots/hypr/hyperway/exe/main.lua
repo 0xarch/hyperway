@@ -8,7 +8,7 @@ end
 
 if os.getenv("HYPERWAY_EXE_DEFAULT") == "1" then
 	hl.on("hyprland.start", function()
-		if os.getenv("HYPERWAY_APPEARANCE" == "") then
+		if os.getenv("HYPERWAY_APPEARANCE") == "" then
 			hl.exec_cmd("mako -c " .. EXE_DIR .. "/mako/config")
 			hl.exec_cmd(EXE_DIR .. "/waybar/start.sh")
 			hl.exec_cmd(
