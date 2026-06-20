@@ -1,8 +1,9 @@
-# Hyperway
 
 # WARNINGS
 
-As AUR is suffering from various attacks (like Atomic Arch), I do not recommend you to use this dot right now, as some of its (optional) dependencies are in AUR (e.g. wlogout)
+As AUR is suffering from various attacks (like `Atomic Arch`), **I do not recommend you to use this dotfile** right now, as some of its (optional) dependencies are in AUR and you have to build them (e.g. wlogout)
+
+# Hyperway
 
 Hyperway is a set of dots that is used by 0xarch for Hyprland WM on Archlinux.
 
@@ -62,6 +63,10 @@ The default (unspecified or not included above) brings you the default configura
 
 Style set included the original sway colors (#285577, #4C7899) in almost all components. No rounded corner, no blur, very less animation.
 
+It's designed for doing work in a efficient way, not capturing pictures and swinging around. All information you need is on the top bar.
+
+This theme also contains a environment compatibility fix to Qt apps to make sure they use the correct theme.
+
 Suggested packages to install: `ttf-firacode-nerd`
 
 The default bar setup:
@@ -69,7 +74,9 @@ The default bar setup:
 Left: (ltr)
 <Workspaces> [<windowClass>] <windowTitle>
 Right: (ltr)
-[<colorMode>] | <OutputVolume> <InputVolume> <BackLight> | <signalStrength> <connectName> | CPU<cpuUsage>(<cpuLoad>) MEM<memUsage>(<memUsed>/<memTotal>)+<swapUsage>(<swapUsed>/<swapTotal>) | <capsLock> <numLock> <batteryPercent> <betteryStat> <dateTime> | <trays>
+<SystemColorMode> | <OutputVolume> <InputVolume> <BackLight> | <signalStrength> <connectName> <connectTypeIcon> | CPU<cpuUsage>(<cpuLoad>) MEM<memUsage>(<memUsed>/<memTotal>)+<swapUsage>(<swapUsed>/<swapTotal>) | <capsLockIndicator><numLockIndicator> <batteryPercent><batteryStatIcon> <dateTime> | <trays>
+
+(The 'CPU' and 'MEM' label's colors change along with usage. Low usage = green, High usage = red, also yellow, orange etc.)
 ```
 
 ## Packages
