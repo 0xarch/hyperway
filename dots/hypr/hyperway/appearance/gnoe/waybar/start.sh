@@ -1,6 +1,6 @@
 #!/bin/sh
 
-CONFIG_DIR=$HOME/.config/hypr/hyperway/appearance/swaylike/waybar/
+CONFIG_DIR=$HOME/.config/hypr/hyperway/appearance/gnoe/waybar/
 COUNT=$HYPERWAY_WORKSPACE_COUNT
 
 PARSED_CONFIG=/tmp/hyperway/$(date +%H%M%S)/waybarconfig.jsonc

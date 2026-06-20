@@ -2,6 +2,32 @@
 #include <stdlib.h>
 #include <string.h>
 
+typedef struct {
+  const char* name;
+  const char* icon;
+} IconRef;
+
+IconRef icon_map[] = {
+  {"kitty", " 󰆍 "},
+  {"chromium", "  "},
+  {"QQ", " 󰘅 "},
+  {"neovide", "  "},
+  {"magicavoxel.exe", "  "},
+  {"finalalert2yr.dat", " 󰨁 "},
+  {"code", " 󰨞 "},
+  {"org.kde.dolphin", " 󰉋 "},
+  {"org.kde.kdenlive", "  "},
+};
+
+const char* find_icon(const char* value) {
+    for (int i = 0; i < sizeof(icon_map) / sizeof(IconRef); i++) {
+        if (strcmp(value, icon_map[i].name) == 0) {
+            return icon_map[i].icon;
+        }
+    }
+    return NULL;
+}
+
 int main(int argc, char *argv[]) {
     if (argc < 2) {
         return 0;
@@ -18,7 +44,7 @@ int main(int argc, char *argv[]) {
         return 0;
     }
     pclose(fp);
-    active_str[strcspn(active_str, "\n")] = '\0';  // 去除换行符
+    active_str[strcspn(active_str, "\n")] = '\0';
     int active = atoi(active_str);
 
     char value[256] = {0};
@@ -49,16 +75,11 @@ int main(int argc, char *argv[]) {
             snprintf(char_a, sizeof(char_a), "<span color='#eeeeee'>");
         }
 
-        if (strcmp(value, "kitty") == 0) {
-            snprintf(char_b, sizeof(char_b), "  ");
-        } else if (strcmp(value, "chromium") == 0) {
-            snprintf(char_b, sizeof(char_b), "  ");
-        } else if (strcmp(value, "QQ") == 0) {
-            snprintf(char_b, sizeof(char_b), "  ");
-        } else if (strcmp(value, "neovide") == 0) {
-            snprintf(char_b, sizeof(char_b), "  ");
-        } else if (strcmp(value, "magicavoxel.exe") == 0) {
-            snprintf(char_b, sizeof(char_b), "  ");
+        const char* icon = find_icon(value);
+        
+
+        if (icon) {
+            snprintf(char_b, sizeof(char_b), "%s", icon);
         } else {
             char tmp[4];
             snprintf(tmp, sizeof(tmp), "%3.3s", value);

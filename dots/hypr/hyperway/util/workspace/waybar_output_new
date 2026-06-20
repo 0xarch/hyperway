@@ -1,0 +1,48 @@
+#!/bin/bash
+
+workspace=$1
+
+requested_icon=$(cat /tmp/hyperway/workspace_state | awk "\$1==$workspace {print \$2}")
+preferred_icon=$(gsettings get org.gnome.desktop.interface icon-theme)
+IFS=':' read -ra xdg_data_dirs <<<"$XDG_DATA_DIRS"
+
+preferred_icon="${preferred_icon:1:-1}"
+
+for xdg_data_dir in "${xdg_data_dirs[@]}"; do
+  preferred_icon_path="$xdg_data_dir/icons/$preferred_icon"
+  if [ -e "$preferred_icon_path" ]; then
+    result=$(find "$preferred_icon_path" -type f -iname "$requested_icon.*" | head -1)
+    if [ "$result" != "" ]; then
+      echo "$result"
+      exit
+    fi
+  fi
+done
+
+IFS=':' read -ra xdg_data_dirs <<<"$XDG_DATA_DIRS"
+
+for xdg_data_dir in "${xdg_data_dirs[@]}"; do
+  preferred_icon_path="$xdg_data_dir/icons/hicolor"
+  if [ -e "$preferred_icon_path" ]; then
+    result=$(find "$preferred_icon_path" -type f -iname "$requested_icon.*" | head -1)
+    if [ "$result" != "" ]; then
+      echo "$result"
+      exit
+    fi
+  fi
+done
+
+IFS=':' read -ra xdg_data_dirs <<<"$XDG_DATA_DIRS"
+
+for xdg_data_dir in "${xdg_data_dirs[@]}"; do
+  preferred_icon_path="$xdg_data_dir/icons/$preferred_icon"
+  if [ -e "$preferred_icon_path" ]; then
+    result=$(find "$preferred_icon_path" -type f -iname "unknown.*" | head -1)
+    if [ "$result" != "" ]; then
+      echo "$result"
+      exit
+    fi
+  fi
+done
+
+echo "Not Found"

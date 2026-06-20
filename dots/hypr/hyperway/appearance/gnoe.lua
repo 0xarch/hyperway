@@ -1,15 +1,15 @@
 CONFIG_DIR = "~/.config/hypr/hyperway"
 
-EXE_DIR = CONFIG_DIR .. "/appearance/swaylike"
+EXE_DIR = CONFIG_DIR .. "/appearance/gnoe"
 
-if os.getenv("HYPERWAY_APPEARANCE") and string.upper(os.getenv("HYPERWAY_APPEARANCE")) == "SWAYLIKE" then
+if os.getenv("HYPERWAY_APPEARANCE") and string.upper(os.getenv("HYPERWAY_APPEARANCE")) == "GNOE" then
 	hl.config({
 		general = {
-			border_size = 2,
-			gaps_in = 0,
-			gaps_out = 0,
+			border_size = 1,
+			gaps_in = 4,
+			gaps_out = 8,
 			col = {
-				active_border = "#4c7899",
+				active_border = "#888888",
 			},
 			layout = "dwindle",
 			resize_on_border = true,
@@ -18,8 +18,8 @@ if os.getenv("HYPERWAY_APPEARANCE") and string.upper(os.getenv("HYPERWAY_APPEARA
 		},
 
 		decoration = {
-			rounding_power = 0,
-			rounding = 0,
+			rounding_power = 2,
+			rounding = 15,
 
 			blur = {
 				enabled = true,
@@ -66,7 +66,7 @@ if os.getenv("HYPERWAY_APPEARANCE") and string.upper(os.getenv("HYPERWAY_APPEARA
 	hl.animation({
 		leaf = "global",
 		enabled = true,
-		speed = 2.5,
+		speed = 2,
 		bezier = "default",
 	})
 

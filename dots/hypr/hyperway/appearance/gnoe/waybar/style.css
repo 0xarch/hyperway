@@ -230,22 +230,6 @@ button:hover {
     min-width: 16px;
 }
 
-#keyboard-state {
-    min-width: 16px;
-}
-
-#keyboard-state > label {
-  color: #666666;
-}
-
-#keyboard-state > label.locked {
-    color: #00ff00;
-}
-
-window#waybar.empty #keyboard-state > label.locked {
-    color: #008800;
-}
-
 /* #scratchpad { */
 /*     background: rgba(0, 0, 0, 0.2); */
 /* } */
@@ -273,6 +257,11 @@ window#waybar.empty #keyboard-state > label.locked {
 /* #privacy-item.audio-out { */
 /*     background-color: #0069d4; */
 /* } */
+
+#network,
+#pulseaudio {
+  padding: 0 2px;
+}
 
 #custom-darkmode {
   font-size: 20px;
