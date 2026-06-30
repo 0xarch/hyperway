@@ -286,4 +286,5 @@ window#waybar.empty #keyboard-state > label.locked {
 
 #custom-workspace {
     font-size: 13px;
+    padding: 0 2px;
 }

@@ -12,11 +12,13 @@ IconRef icon_map[] = {
   {"chromium", "  "},
   {"QQ", " 󰘅 "},
   {"neovide", "  "},
-  {"magicavoxel.exe", "  "},
-  {"finalalert2yr.dat", " 󰨁 "},
+  {"magicavoxel.exe", "MaV"},
+  {"finalalert2yr.dat", "FA2"},
   {"code", " 󰨞 "},
   {"org.kde.dolphin", " 󰉋 "},
   {"org.kde.kdenlive", "  "},
+  {"org.kde.krita", "  "},
+  {"com.obsproject.Studio", "OBS"}
 };
 
 const char* find_icon(const char* value) {
