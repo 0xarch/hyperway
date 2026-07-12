@@ -24,7 +24,7 @@ if os.getenv("HYPERWAY_APPEARANCE") and string.upper(os.getenv("HYPERWAY_APPEARA
 			blur = {
 				enabled = true,
 				xray = true,
-				size = 8,
+				size = 1,
 				passes = 2,
 			},
 
@@ -87,7 +87,7 @@ if os.getenv("HYPERWAY_APPEARANCE") and string.upper(os.getenv("HYPERWAY_APPEARA
 	hl.env("ELECTRON_OZONE_PLATFORM_HINT", "auto")
 	hl.env("QT_QPA_PLATFORM", "wayland;xcb")
 	hl.env("QT_QPA_PLATFORMTHEME", "kde")
-	hl.env("XDG_MENU_PREFIX", "plasma-")
+	hl.env("XDG_MENU_PREFIX", "arch-")
 
 	hl.on("hyprland.start", function()
 		hl.exec_cmd("mako -c " .. EXE_DIR .. "/mako/config")

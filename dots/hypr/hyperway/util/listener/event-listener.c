@@ -46,7 +46,8 @@ static void waybar_ws(const char *line) {
     mkdir("/tmp/hyperway", 0755);
 
     FILE *cmd = popen(
-        "hyprctl clients -j | jq -cr 'unique_by(.workspace.id) | .[]? | (.workspace.id | tostring)+\" \"+.class'",
+        "hyprctl clients -j | jq -cr 'group_by(.workspace.id) | map({ id: .[0].workspace.id, classes: map(.class) }) | map([.id] + .classes[0:3]) | .[]? | join(\" \")'",
+        // "hyprctl clients -j | jq -cr 'unique_by(.workspace.id) | .[]? | (.workspace.id | tostring)+\" \"+.class'",
         "r"
     );
     if (cmd) {
