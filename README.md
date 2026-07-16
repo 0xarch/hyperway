@@ -1,7 +1,6 @@
+# Note
 
-# WARNINGS
-
-As AUR is suffering from various attacks in June (like `Atomic Arch`), **I do not recommend you to use all features this dotfile** right now, as some of its (optional) dependencies are in AUR and you have to build them (e.g. wlogout)
+The project has moved to [Codeberg](https://codeberg.org/0xarch/dotfiles) at 2026-07-16 05:22 UTC. No more updates will be pushed to GitHub.
 
 # Hyperway
 
