@@ -23,6 +23,8 @@ cp $CONFIG_DIR/config.jsonc $PARSED_CONFIG
 sed -i "s|%%WORKSPACE_LIST%%|$workspace_list|" $PARSED_CONFIG
 sed -i "s|%%WORKSPACE%%|$workspace_conf|" $PARSED_CONFIG
 
+export GTK_THEME='Breeze' # Breeze:dark did not work as expected
+
 waybar -c "$PARSED_CONFIG" -s "$CONFIG_DIR/style.css"
 
 rm $PARSED_CONFIG

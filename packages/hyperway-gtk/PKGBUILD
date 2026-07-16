@@ -1,0 +1,13 @@
+groups=(hyperway-dots)
+pkgname=hyperway-gtk
+pkgver=1.0
+pkgrel=1
+pkgdesc="GTK/GNOME Integration Meta package for Hyperway"
+arch=(any)
+license=(None)
+depends=(
+  xdg-desktop-portal-gtk
+  polkit-gnome
+  networkmanager
+  gnome-keyring
+)

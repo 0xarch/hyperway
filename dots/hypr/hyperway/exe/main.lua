@@ -19,10 +19,14 @@ if os.getenv("HYPERWAY_EXE_DEFAULT") == "1" then
 			hl.exec_cmd(CONFIG_DIR .. "/util/listener/event-listener")
 		end
 
-		-- INTEGRATIONS --
+		-- TOOLS --
 		hl.exec_cmd("fcitx5 -d")
-		hl.exec_cmd("/usr/lib/polkit-kde-authentication-agent-1")
-		hl.exec_cmd("/usr/lib/xdg-desktop-portal")
+		hl.exec_cmd("wayscriber --daemon")
+		-- INTEGRATIONS --
+		hl.exec_cmd(
+			"if which /usr/lib/polkit-kde-authentication-agent-1; then /usr/lib/polkit-kde-authentication-agent-1; else /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1; fi"
+		)
+		-- hl.exec_cmd("/usr/lib/xdg-desktop-portal")
 		hl.exec_cmd("kbuildsyscoca6")
 		hl.exec_cmd("kded6")
 	end)

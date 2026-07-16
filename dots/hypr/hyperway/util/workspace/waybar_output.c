@@ -154,7 +154,7 @@ int main(int argc, char *argv[]) {
       colors[0], icons[0], colors[1], icons[1]);
   } else if (count == 3) {
     snprintf(inner, sizeof(inner),
-      "<span color='%s'>%s</span> <span color='%s'>%s</span> <span color='%s'>%s</span>",
+      "<span color='%s'>%s</span> <span color='%s'>%s</span> <span color='%s'>%s</span> ",
       colors[0], icons[0], colors[1], icons[1], colors[2], icons[2]);
   }
 

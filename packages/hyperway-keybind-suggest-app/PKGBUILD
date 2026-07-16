@@ -1,7 +1,7 @@
 groups=(hyperway-dots)
 pkgname=hyperway-keybind-suggest-app
 pkgver=1.0
-pkgrel=3
+pkgrel=4
 pkgdesc="Suggested package for Hyperway"
 arch=(any)
 license=(None)
@@ -9,7 +9,7 @@ depends=(
   dolphin
   chromium
   pavucontrol-qt
-  plasma-workspace
+  # plasma-workspace
   wf-recorder
   cliphist
   fuzzel
